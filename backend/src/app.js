@@ -9,7 +9,11 @@ import authRoutes from "./routes/auth_routes.js";
 import categoryRoutes from "./routes/category_routes.js";
 import expenseRoutes from "./routes/expense_routes.js";
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "*",
+  }),
+);
 
 app.use(express.json());
 
